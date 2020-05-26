@@ -51,13 +51,13 @@ window.addEventListener("load", ()=>{
 
 
    form.addEventListener("submit", (event)=>{
-      if(pilotName.value===""||coPilotName.value===""){alert("All fields are required!"); allFieldsFilled = false;}//Empty field checker
-      else if(!isNaN(pilotName.value)||!isNaN(coPilotName.value)){
+      if(pilotName.value===""||coPilotName.value===""){
+         if(fuelLevel.value===""||cargoMass.value===""){alert("All fields are required!");//empty field checker
+         allFieldsFilled = false;
+         }
+      }else if(!isNaN(pilotName.value)||!isNaN(coPilotName.value)){
          alert("Please only type names in the Pilot and Copilot name fields"); correctDataInField = false;//Type checker
-      }
-
-      if(fuelLevel.value===""||cargoMass.value===""){alert("All fields are required!"); allFieldsFilled = false;}//Empty field checker
-      else if(isNaN(fuelLevel.value)||isNaN(cargoMass.value)){
+      }else if(isNaN(fuelLevel.value)||isNaN(cargoMass.value)){
          alert("Please only type integer values for the Fuel Mass and Cargo Mass fields"); correctDataInField = false;//Type checker
       } 
       
