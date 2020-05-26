@@ -10,6 +10,11 @@ div {
     visibility: hidden;   
 }
 
+#selectMission{
+    margin: auto;
+    text-align: center;
+}
+
 #launchForm {
     background-color: #ECF0F1;
     text-align: center;
